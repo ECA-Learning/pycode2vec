@@ -56,7 +56,7 @@ test_codeblocks_to_filepaths_dict = dict()
 
 create_dir(test_path)
 for i, code in df_test['code_block'].items():
-    filepath = test_path + '/' + str(i) + '|' + df_test['target'].loc[i] + '.py'
+    filepath = test_path + '/' + str(i) + '|' + str(df_test['target'].loc[i]) + '.py'
     test_codeblocks_to_filepaths_dict[code] = filepath
     print(code[1:-1], file=open(filepath, 'w+'))
 
