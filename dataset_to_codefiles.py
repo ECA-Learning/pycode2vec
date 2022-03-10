@@ -44,12 +44,12 @@ test_path = os.path.join(args.chunks_dir, 'test')
 
 create_dir(train_path)
 for i, code in X_train.items():
-    filepath = train_path + '/' + str(i) + '|' + y_train.loc[i] + '.py'
+    filepath = train_path + '/' + str(i) + '|' + str(y_train.loc[i]) + '.py'
     print(code[1:-1], file=open(filepath, 'w+'))
 
 create_dir(val_path)
 for i, code in X_test.items():
-    filepath = val_path + '/' + str(i) + '|' + y_test.loc[i] + '.py'
+    filepath = val_path + '/' + str(i) + '|' + str(y_test.loc[i]) + '.py'
     print(code[1:-1], file=open(filepath, 'w+'))
 
 test_codeblocks_to_filepaths_dict = dict()
